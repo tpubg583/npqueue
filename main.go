@@ -81,7 +81,7 @@ func getPlayerList() (err error) {
 // getServerQueue opens UDP socket to get queue count
 func getServerQueue() (err error) {
 	serverData := make([]byte, 256)
-	serverConnection, err := net.Dial("udp", ServerAddress + ":30120")
+	serverConnection, err := net.Dial("udp", ServerAddress)
 	if err != nil {
 		return err
 	} else {
